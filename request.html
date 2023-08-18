@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Goldex</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230818164521">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="/" class="header__logo">Gold<span>ex</span></a>
+            <div class="header__menu menu" data-desk="lang, after">
+                <nav class="menu__body" data-mob="lang, append">
+                    <ul class="menu__list" data-mob="btns, after">
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link">Обмен</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Правила обмена</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__lang lang" data-move="lang, 576">
+                <div class="lang__selest select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="ru" name="lang">
+                            <label for="for ru">Ru</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="ua" name="lang">
+                            <label for="for ua">Ua</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="en" name="lang">
+                            <label for="for en">En</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Ru
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns" data-move="btns, 480">
+                <button type="button" class="header__btn btn-white">Войти</button>
+                <button type="button" class="header__btn btn-orange">Регистрация</button>
+            </div>
+            <button class="header__menu-icon" data-desk="btns, before"></button>
+        </div>
+    </div>
+</header>
+
+        <div class="request">
+            <div class="request__container container">
+                <div class="request__body">
+                    <div class="request__header">
+                        <h2 class="request__title">Ожидается оплата</h2>
+                        <div class="request__clock">
+                            <picture><source srcset="img/clock.webp" type="image/webp"><img src="img/clock.png" alt="Image"></picture>
+                        </div>
+                        <p class="request__number">№ 657854</p>
+                    </div>
+                    <div class="request__timer timer">
+                        <div class="timer__info">
+                            Оплатите заявку в течении <span>300</span>
+                        </div>
+                        <div class="timer__bar">
+                            <div class="timer__progress"></div>
+                        </div>
+                    </div>
+                    <div class="request__details details-request">
+                        <div class="details-request__body body-request">
+                            <div class="body-request__info">
+                                <div class="body-request__item item-request">
+                                    <div class="item-request__info">
+                                        <div class="item-request__title">Вы отправляете</div>
+                                        <div class="item-request__value">250 USDT</div>
+                                        <div class="item-request__currency">Tether TRC20 USDT</div>
+                                    </div>
+                                    <div class="item-request__image">
+                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    </div>
+                                </div>
+                                <div class="body-request__vs">
+                                    <svg>
+                                        <use href="img/icons/icons.svg#exchange"></use>
+                                    </svg>
+                                </div>
+                                <div class="body-request__item item-request">
+                                    <div class="item-request__image">
+                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    </div>
+                                    <div class="item-request__info">
+                                        <div class="item-request__title">Вы получаете</div>
+                                        <div class="item-request__value">9376.26857 UAH</div>
+                                        <div class="item-request__currency">Privat Bank UAH</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="body-request__form">
+                                <h2 class="body-request__title">Переведите</h2>
+                                <div class="body-request__input">
+                                    <input type="text" name="count">
+                                </div>
+                                <div class="body-request__input">
+                                    <input type="text" name="wallet">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="details-request__code">
+                            <div class="details-request__image">
+                                <img src="img/qr.svg" alt="QR-code">
+                            </div>
+                            <div class="details-request__message">QR - код для оплаты</div>
+                        </div>
+                    </div>
+                    <p class="request__info">
+                        После осуществления перевода обязательно нажмите кнопку “я оплатил” и ожидайте завершения
+                        обмена.
+                    </p>
+                    <div class="request__btns">
+                        <button type="submit" class="request__btn btn-orange">Я оплатил</button>
+                        <button type="button" class="request__btn btn-white">Отмена</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <script src="js/app.min.js?_v=20230818164521"></script>
+</body>
+
+</html>

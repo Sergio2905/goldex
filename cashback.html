@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Goldex</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230818164521">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="/" class="header__logo">Gold<span>ex</span></a>
+            <div class="header__menu menu" data-desk="lang, after">
+                <nav class="menu__body" data-mob="lang, append">
+                    <ul class="menu__list" data-mob="btns, after">
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link">Обмен</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Правила обмена</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__lang lang" data-move="lang, 576">
+                <div class="lang__selest select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="ru" name="lang">
+                            <label for="for ru">Ru</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="ua" name="lang">
+                            <label for="for ua">Ua</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="en" name="lang">
+                            <label for="for en">En</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Ru
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns" data-move="btns, 480">
+                <button type="button" class="header__btn btn-white">Войти</button>
+                <button type="button" class="header__btn btn-orange">Регистрация</button>
+            </div>
+            <button class="header__menu-icon" data-desk="btns, before"></button>
+        </div>
+    </div>
+</header>
+
+        <div class="cashback">
+            <div class="cashback__container container">
+                <div class="cashback__body">
+                    <h2 class="cashback__title">Щоденний кешбек</h2>
+                    <div class="cashback__for">
+                        За відгук на <a href="#">Bestchange</a>
+                    </div>
+                    <div class="cashback__rules">
+                        Правила <a href="#">тут</a>
+                    </div>
+                    <form action="#" class="cashback__form">
+                        <div class="cashback__input input">
+                            <input type="text" name="email" placeholder="Введите Ваш e-mail">
+                        </div>
+                        <div class="cashback__input input">
+                            <input type="text" name="number" placeholder="Код">
+                        </div>
+                        <div class="cashback__done">
+                            Я залишив відгук
+                            <button type="button" class="cashback__switcher">
+                                <span>Так</span>
+                                <span>Ні</span>
+                                <input type="checkbox">
+                            </button>
+                        </div>
+                        <button type="submit" class="cashback__btn btn-orange">Згенерувати суму</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <script src="js/app.min.js?_v=20230818164521"></script>
+</body>
+
+</html>
