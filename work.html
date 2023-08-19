@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Goldex</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230819165416">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="/" class="header__logo">Gold<span>ex</span></a>
+            <div class="header__menu menu" data-desk="lang, after">
+                <nav class="menu__body" data-mob="lang, append">
+                    <ul class="menu__list" data-mob="btns, after">
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link">Обмен</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Правила обмена</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__lang lang" data-move="lang, 576">
+                <div class="lang__selest select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="ru" name="lang">
+                            <label for="for ru">Ru</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="ua" name="lang">
+                            <label for="for ua">Ua</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="en" name="lang">
+                            <label for="for en">En</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Ru
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns" data-move="btns, 480">
+                <button type="button" class="header__btn btn-white">Войти</button>
+                <button type="button" class="header__btn btn-orange">Регистрация</button>
+            </div>
+            <button class="header__menu-icon" data-desk="btns, before"></button>
+        </div>
+    </div>
+</header>
+
+        <div class="work">
+            <div class="work__container container">
+                <div class="work__body">
+                    <div class="work__panel panel-work">
+                        <div class="panel-work__header">
+                            <h2 class="panel-work__title title">Всего бонусов</h2>
+                            <div class="panel-work__value">$ 0.00</div>
+                        </div>
+                        <div class="panel-work__btns">
+                            <button type="button" class="panel-work__btn btn-orange">История операций</button>
+                            <button type="button" class="panel-work__btn btn-white">Верификация карт</button>
+                            <button type="button" class="panel-work__btn btn-white">Настройки</button>
+                        </div>
+                    </div>
+                    <div class="work__wrapper">
+                        <div class="work__main main-work">
+                            <div class="main-work__exchange">
+                                <div class="main-work__icon">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                </div>
+                                <div class="main-work__vs">
+                                    <svg>
+                                        <use href="img/icons/icons.svg#exchange"></use>
+                                    </svg>
+                                </div>
+                                <div class="main-work__icon">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                </div>
+                            </div>
+                            <div class="main-work__form">
+                                <h2 class="main-work__title">Заявка <span>№ 657854</span> принята в обработку!</h2>
+                                <p class="main-work__desc">Мы обработаем вашу заявку после зачисления средств на наш
+                                    счет.</p>
+                                <button type="button" class="main-work__btn btn-orange popup-link"
+                                    data-modal="attention">Получить
+                                    кэшбек</button>
+                            </div>
+                        </div>
+                        <div class="work__progress progress-work">
+                            <div class="progress-work__grid">
+                                <div class="progress-work__cell active">
+                                    <div class="progress-work__item active">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#profit"></use>
+                                        </svg>
+                                        Ожидаем поступления средств
+                                    </div>
+                                </div>
+                                <div class="progress-work__cell">
+                                    <div class="progress-work__item">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#exchange"></use>
+                                        </svg>
+                                        Выполняем обмен
+                                    </div>
+                                </div>
+                                <div class="progress-work__bar">
+                                    <div class="progress-work__scale"></div>
+                                </div>
+                                <div class="progress-work__cell">
+                                    <div class="progress-work__item">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#planet"></use>
+                                        </svg>
+                                        Ожидаем подтверждения сети
+                                    </div>
+                                </div>
+                                <div class="progress-work__cell">
+                                    <div class="progress-work__item">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#check2"></use>
+                                        </svg>
+                                        Обмен завершен
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work__details details-work">
+                            <div class="details-work__block">
+                                <div class="details-work__item">Детали транзакции <span>Отдаю</span></div>
+                                <div class="details-work__item details-work__item_currency">
+                                    <div class="details-work__image">
+                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    </div>
+                                    Tether TRC20 USDT
+                                </div>
+                                <div class="details-work__item">Отправляете: <span>250 USDT</span></div>
+                                <div class="details-work__item">Время создания: <span>8 авг 2023, 10:47</span></div>
+                            </div>
+                            <div class="details-work__block">
+                                <div class="details-work__item">Детали транзакции <span>Получаю</span></div>
+                                <div class="details-work__item details-work__item_currency">
+                                    <div class="details-work__image">
+                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    </div>
+                                    Privat Bank UAH
+                                </div>
+                                <div class="details-work__item">Номер счета: <span>4441 1144 4111 5557 7788</span></div>
+                                <div class="details-work__item">Получаете: <span>9376.26857 UAH</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <div class="popup" id="attention">
+    <div class="popup__wrapper">
+        <div class="popup__content attention">
+            <div class="attention__body">
+                <button type="button" class="attention__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="attention__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#attention"></use>
+                    </svg>
+                </div>
+                <h2 class="attention__title title">Будьте уважними</h2>
+                <p class="attention__info">
+                    Будь ласка , залиште відгук перед запуском генерації суми
+                </p>
+                <div class="attention__link">
+                    Перейти на <a href="#">Bestchange</a>
+                </div>
+                <button type="button" class="attention__btn btn-orange">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20230819165416"></script>
+</body>
+
+</html>

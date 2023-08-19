@@ -4,7 +4,7 @@
 <head>
     <title>Goldex</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230818164521">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230819165416">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -148,8 +148,33 @@
 </footer>
     </div>
 
-    
-    <script src="js/app.min.js?_v=20230818164521"></script>
+    <div class="popup" id="attention">
+    <div class="popup__wrapper">
+        <div class="popup__content attention">
+            <div class="attention__body">
+                <button type="button" class="attention__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="attention__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#attention"></use>
+                    </svg>
+                </div>
+                <h2 class="attention__title title">Будьте уважними</h2>
+                <p class="attention__info">
+                    Будь ласка , залиште відгук перед запуском генерації суми
+                </p>
+                <div class="attention__link">
+                    Перейти на <a href="#">Bestchange</a>
+                </div>
+                <button type="button" class="attention__btn btn-orange">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20230819165416"></script>
 </body>
 
 </html>
