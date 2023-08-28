@@ -70,33 +70,141 @@
     </div>
 </header>
 
-        <div class="cashback">
-            <div class="cashback__container container">
-                <div class="cashback__body">
-                    <h2 class="cashback__title">Щоденний кешбек</h2>
-                    <div class="cashback__for">
-                        За відгук на <a href="#">Bestchange</a>
+        <div class="profile">
+            <div class="profile__container container">
+                <div class="profile__body">
+                    <div class="profile__content">
+                        <div class="profile__menu menu-profile">
+                            <nav class="menu-profile__body">
+                                <ul class="menu-profile__list">
+                                    <li class="menu-profile__item active">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#user"></use>
+                                            </svg>
+                                            Профиль
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#doc"></use>
+                                            </svg>
+                                            Верификация
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#clock2"></use>
+                                            </svg>
+                                            Заявки
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#link"></use>
+                                            </svg>
+                                            Реферали
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#dollar"></use>
+                                            </svg>
+                                            Инвестиции
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#card"></use>
+                                            </svg>
+                                            Реквизиты
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#exit"></use>
+                                            </svg>
+                                            Выход
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="profile__header header-profile">
+                            <div class="header-profile__body">
+                                <h1 class="header-profile__title title">Верификация</h1>
+                            </div>
+                        </div>
+                        <form action="#" class="profile__form form-profile">
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Тип документа</div>
+                                <input type="text" placeholder="Тип документа" name="doc-type">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Номер документа</div>
+                                <input type="text" placeholder="Номер документа" name="doc-number">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Имя</div>
+                                <input type="text" placeholder="Имя" name="name">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Фамилия</div>
+                                <input type="text" placeholder="Фамилия" name="surname">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Дата рождения</div>
+                                <input type="text" placeholder="Дата рождения" name="birth-date">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Номер телефона</div>
+                                <input type="text" placeholder="Номер телефона" name="phone">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Страна</div>
+                                <input type="text" placeholder="Страна" name="country">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Город</div>
+                                <input type="text" placeholder="Город" name="city">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Адрес</div>
+                                <input type="text" placeholder="Адрес" name="address">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Почтовый индекс</div>
+                                <input type="text" placeholder="Почтовый индекс" name="zip-code">
+                            </div>
+                            <div class="form-profile__input form-profile__input_file">
+                                <div class="form-profile__label">Загрузите не более 3 фотографий</div>
+                                <div class="form-profile__file">
+                                    <label for="form-profile-file">
+                                        <span>Выбрать файл</span>
+                                    </label>
+                                    <button type="button" class="form-profile__upload">Загрузить</button>
+                                    <input type="file" name="file" id="form-profile-file">
+                                </div>
+                            </div>
+                            <div class="form-profile__info">
+                                Предоставьте фотографии документов подтверждающих вашу личность. Сделайте селфи на
+                                котором вы держите свои документы, в эту же фотографию поставьте свою подпись и текущую
+                                дату. Убедитесь, что ваше лицо четко видно и то, что все данные докуметов в читабельном
+                                виде.
+                            </div>
+                            <div class="form-profile__btns">
+                                <button type="submit" class="form-profile__btn btn-orange">
+                                    Продолжить
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="cashback__rules">
-                        Правила <a href="#">тут</a>
-                    </div>
-                    <form action="#" class="cashback__form">
-                        <div class="cashback__input input">
-                            <input type="text" name="email" placeholder="Введите Ваш e-mail">
-                        </div>
-                        <div class="cashback__input input">
-                            <input type="text" name="number" placeholder="Код">
-                        </div>
-                        <div class="cashback__done">
-                            Я залишив відгук
-                            <button type="button" class="cashback__switcher">
-                                <span>Так</span>
-                                <span>Ні</span>
-                                <input type="checkbox">
-                            </button>
-                        </div>
-                        <button type="submit" class="cashback__btn btn-orange">Згенерувати суму</button>
-                    </form>
                 </div>
             </div>
         </div>

@@ -70,32 +70,61 @@
     </div>
 </header>
 
-        <div class="cashback">
-            <div class="cashback__container container">
-                <div class="cashback__body">
-                    <h2 class="cashback__title">Щоденний кешбек</h2>
-                    <div class="cashback__for">
-                        За відгук на <a href="#">Bestchange</a>
-                    </div>
-                    <div class="cashback__rules">
-                        Правила <a href="#">тут</a>
-                    </div>
-                    <form action="#" class="cashback__form">
-                        <div class="cashback__input input">
-                            <input type="text" name="email" placeholder="Введите Ваш e-mail">
+        <div class="confirm">
+            <div class="confirm__container container">
+                <div class="confirm__body">
+                    <h1 class="confirm__title title">Подтверждение обмена</h1>
+                    <p class="confirm__attention">Внимательно проверьте данные вашей заявки на обмен.</p>
+                    <form action="#" class="confirm__form form-confirm">
+                        <div class="form-confirm__row">
+                            <div class="form-confirm__block">
+                                <div class="form-confirm__wrapper">
+                                    <div class="form-confirm__header">
+                                        <div class="form-confirm__name">Отдаете</div>
+                                        <div class="form-confirm__icon">
+                                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                        </div>
+                                        <div class="form-confirm__currency title">Bitcoin</div>
+                                    </div>
+                                    <div class="form-confirm__input input">
+                                        <div class="form-confirm__label">Отдаете</div>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="form-confirm__wrapper">
+                                    <div class="form-confirm__header">
+                                        <div class="form-confirm__name">Получаете</div>
+                                        <div class="form-confirm__icon">
+                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                        </div>
+                                        <div class="form-confirm__currency title">Cash UAH (UA, Kyiv)</div>
+                                    </div>
+                                    <div class="form-confirm__input input">
+                                        <div class="form-confirm__label">Получаете</div>
+                                        <input type="text" placeholder="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-confirm__block data-confirm">
+                                <h2 class="data-confirm__title title">Персональные данные</h2>
+                                <div class="data-confirm__wrapper">
+                                    <div class="data-confirm__label">Электронная почта</div>
+                                    <div class="data-confirm__input input">
+                                        <input type="text" name="email">
+                                    </div>
+                                </div>
+                                <div class="data-confirm__wrapper">
+                                    <div class="data-confirm__label">Номер телефона</div>
+                                    <div class="data-confirm__input input">
+                                        <input type="text" name="phone">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="cashback__input input">
-                            <input type="text" name="number" placeholder="Код">
+                        <div class="form-confirm__btns">
+                            <button type="submit" class="form-confirm__btn btn-orange">Создать заявку</button>
+                            <button type="button" class="form-confirm__btn btn-white">Отменить</button>
                         </div>
-                        <div class="cashback__done">
-                            Я залишив відгук
-                            <button type="button" class="cashback__switcher">
-                                <span>Так</span>
-                                <span>Ні</span>
-                                <input type="checkbox">
-                            </button>
-                        </div>
-                        <button type="submit" class="cashback__btn btn-orange">Згенерувати суму</button>
                     </form>
                 </div>
             </div>

@@ -70,33 +70,147 @@
     </div>
 </header>
 
-        <div class="cashback">
-            <div class="cashback__container container">
-                <div class="cashback__body">
-                    <h2 class="cashback__title">Щоденний кешбек</h2>
-                    <div class="cashback__for">
-                        За відгук на <a href="#">Bestchange</a>
+        <div class="profile">
+            <div class="profile__container container">
+                <div class="profile__body">
+                    <div class="profile__cards">
+                        <div class="profile__card card-profile">
+                            <div class="card-profile__body">
+                                <div class="card-profile__name">
+                                    Баланс
+                                </div>
+                                <div class="card-profile__value">
+                                    <svg>
+                                        <use href="img/icons/icons.svg#dollar"></use>
+                                    </svg>
+                                    0.00 USD
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__card card-profile">
+                            <div class="card-profile__body">
+                                <div class="card-profile__name">
+                                    Дата регистрации
+                                </div>
+                                <div class="card-profile__value">
+                                    <svg>
+                                        <use href="img/icons/icons.svg#calendar"></use>
+                                    </svg>
+                                    10.10.2023, 12:15
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="cashback__rules">
-                        Правила <a href="#">тут</a>
+                    <div class="profile__content">
+                        <div class="profile__menu menu-profile">
+                            <nav class="menu-profile__body">
+                                <ul class="menu-profile__list">
+                                    <li class="menu-profile__item active">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#user"></use>
+                                            </svg>
+                                            Профиль
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#doc"></use>
+                                            </svg>
+                                            Верификация
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#clock2"></use>
+                                            </svg>
+                                            Заявки
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#link"></use>
+                                            </svg>
+                                            Реферали
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#dollar"></use>
+                                            </svg>
+                                            Инвестиции
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#card"></use>
+                                            </svg>
+                                            Реквизиты
+                                        </a>
+                                    </li>
+                                    <li class="menu-profile__item">
+                                        <a href="#" class="menu-profile__link">
+                                            <svg>
+                                                <use href="img/icons/icons.svg#exit"></use>
+                                            </svg>
+                                            Выход
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="profile__header header-profile">
+                            <div class="header-profile__body">
+                                <h1 class="header-profile__title title">Профиль</h1>
+                                <div class="header-profile__links">
+                                    <a href="#" class="header-profile__link">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#lock"></use>
+                                        </svg>
+                                        <span>API доступ</span>
+                                    </a>
+                                    <a href="#" class="header-profile__link">
+                                        <svg>
+                                            <use href="img/icons/icons.svg#key"></use>
+                                        </svg>
+                                        <span>Двухфакторная аутентификация</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <form action="#" class="profile__form form-profile">
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Логин</div>
+                                <input type="text" placeholder="Логин" name="login">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Электронная почта</div>
+                                <input type="text" placeholder="Электронная почта" name="email">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Новый пароль</div>
+                                <input type="text" placeholder="Новый пароль" name="pass-new">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Повторите новый пароль</div>
+                                <input type="text" placeholder="Повторите новый пароль" name="pass-confirm">
+                            </div>
+                            <div class="form-profile__input">
+                                <div class="form-profile__label">Пароль</div>
+                                <input type="text" placeholder="Пароль" name="pass">
+                            </div>
+                            <div class="form-profile__btns">
+                                <button type="submit" class="form-profile__btn btn-orange">
+                                    Сохранить
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <form action="#" class="cashback__form">
-                        <div class="cashback__input input">
-                            <input type="text" name="email" placeholder="Введите Ваш e-mail">
-                        </div>
-                        <div class="cashback__input input">
-                            <input type="text" name="number" placeholder="Код">
-                        </div>
-                        <div class="cashback__done">
-                            Я залишив відгук
-                            <button type="button" class="cashback__switcher">
-                                <span>Так</span>
-                                <span>Ні</span>
-                                <input type="checkbox">
-                            </button>
-                        </div>
-                        <button type="submit" class="cashback__btn btn-orange">Згенерувати суму</button>
-                    </form>
                 </div>
             </div>
         </div>
