@@ -3470,8 +3470,8 @@ body.lock {
   transform: translate(0, -50%) rotate(-45deg);
   border-radius: 50%;
   border: 1px solid #fff;
-  -webkit-mask: url("../../img/icons/icons.svg#close");
-          mask: url("../../img/icons/icons.svg#close");
+  -webkit-mask: url("../img/icons/icons.svg#close");
+          mask: url("../img/icons/icons.svg#close");
   background: var(--orange);
   transition: all 0.3s linear;
 }
