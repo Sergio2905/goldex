@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Goldex</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230913151908">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__container container">
+        <div class="header__body">
+            <a href="/" class="header__logo">
+                <picture><source srcset="img/logo-header.webp" type="image/webp"><img src="img/logo-header.png" alt="Logo"></picture>
+            </a>
+            <div class="header__menu menu" data-desk="lang, after">
+                <nav class="menu__body" data-mob="lang, append">
+                    <ul class="menu__list" data-mob="btns, after">
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link">Обмен</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Правила обмена</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__lang lang" data-move="lang, 576">
+                <div class="lang__selest select-box">
+                    <div class="options-container">
+                        <div class="option">
+                            <input type="radio" class="radio" id="ru" name="lang">
+                            <label for="for ru">Ru</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="ua" name="lang">
+                            <label for="for ua">Ua</label>
+                        </div>
+                        <div class="option">
+                            <input type="radio" class="radio" id="en" name="lang">
+                            <label for="for en">En</label>
+                        </div>
+                    </div>
+                    <div class="selected">
+                        Ru
+                    </div>
+                </div>
+            </div>
+            <div class="header__btns" data-move="btns, 480">
+                <button type="button" class="header__btn btn-white">
+                    Telegram
+                    <svg>
+                        <use href="img/icons/icons.svg#telegram"></use>
+                    </svg>
+                </button>
+                <button type="button" class="header__btn btn-orange popup-link" data-modal="login">Войти</button>
+            </div>
+            <button class="header__menu-icon" data-desk="btns, before"></button>
+        </div>
+    </div>
+</header>
+
+        <div class="policy">
+            <div class="policy__container container">
+                <div class="policy__body">
+                    <h1 class="policy__title title">AML & KYC</h1>
+                    <h2 class="policy__subtitle subtitle">Политика по борьбе с отмыванием денег</h2>
+                    <div class="policy__info">
+                        Как международные, так и местные правила и законодательство требуют, чтобы сервис обмена
+                        Ecash.Expert осуществлял эффективные внутренние процедуры для предотвращения любой незаконной
+                        деятельности и принимал для этого все необходимые меры.
+                        Сервис Ecash.Expert придерживается практик в области противодействия легализации (отмыванию)
+                        доходов, полученных преступным путём и финансированию терроризма (AML — Anti Money Laundering),
+                        а также политики "Знай своего клиента" (KYC). <br>
+                        Политика AML / KYC охватывает следующие вопросы: <br>
+                        — Процедуры верификации;<br>
+                        — Мониторинг транзакций;<br>
+                        — Оценка риска.<br>
+                        1. Процедуры верификации<br>
+                        1.1. Подтверждение личности<br>
+                        Процедура верификации на Ecash.Expert требует, чтобы Пользователь предоставил администрации
+                        сервиса подлинные документы (например, международный паспорт, выписку по счету, счет за
+                        коммунальные услуги и др.). Для таких целей Ecash.Expert оставляет за собой право собирать
+                        идентификационную информацию пользователя в рамках политики борьбы с отмыванием денег и политики
+                        «Знай своего клиента».<br>
+                        Также, Ecash.Expert оставляет за собой право дополнительно проверять определенных Пользователей,
+                        которые вызвали подозрение. Процесс проверки включает, предоставление документов, подтверждающих
+                        личность Пользователя.<br>
+                        Для физических лиц:<br>
+                        1&#41; Для подтверждения личности Пользователь должен предоставить один из следующих
+                        документов:<br>
+                        — гражданский паспорт;<br>
+                        — международный паспорт;<br>
+                        — ID карта.<br>
+                        2&#41; Для подтверждения адреса Пользователь должен предоставить один из следующих
+                        документов:<br>
+                        — выписка из банка, где четко виден адрес Вашего фактического проживания;<br>
+                        — счет за коммунальные услуги, где четко видно адрес Вашего фактического проживания;<br>
+                        — налоговые документы, в которых четко виден адрес Вашего фактического проживания;<br>
+                        — документ, подтверждающий адрес Вашего фактического проживания, выданный местными властями, где
+                        четко виден адрес вашего фактического проживания.<br>
+                        Для корпоративных клиентов:<br>
+                        1&#41; Для подтверждения личности Пользователь должен предоставить один из следующих
+                        документов:<br>
+                        — гражданский паспорт директора;<br>
+                        — международный паспорт директора;<br>
+                        — ID директора;<br>
+                        2&#41; Чтобы подтвердить адрес, Пользователь должен предоставить один из следующих
+                        документов:<br>
+                        — выписка из банка, где четко виден адрес Вашего фактического проживания;<br>
+                        — счет за коммунальные услуги, где четко видно адрес Вашего фактического проживания;<br>
+                        — налоговые документы, в которых четко виден адрес Вашего фактического проживания;<br>
+                        — Документ, подтверждающий адрес Вашего фактического проживания, выданный местными властями, где
+                        четко виден адрес вашего фактического проживания.<br>
+                        3&#41; Чтобы подтвердить, что Пользователь является уполномоченным представителем организации,
+                        он
+                        должен предоставить все следующие документы:<br>
+                        — документ, подтверждающий юридический адрес компании;<br>
+                        — документ о регистрации юридического лица;<br>
+                        — распоряжение о назначении директора;<br>
+                        — отсканированная копия или фотография письма о решении работать с Ecash.Expert<br>
+                        4&#41; Информация о конечном бенефициаре:<br>
+                        — гражданский паспорт конечного бенефициара;<br>
+                        — международный паспорт конечного бенефициара;<br>
+                        — ID конечного бенефициара;<br>
+                        — документ, подтверждающий адрес конечного бенефициара. Конечный бенефициар, согласно кипрскому
+                        законодательству, означает физическое лицо, которое владеет или контролирует Счет Пользователя
+                        и/или физическое лицо, от имени которого совершаются транзакции.<br>
+                        1.2. Верификация банковской карты<br>
+                        Пользователи, которые хотят провести обмен с участием банковской карты, должны предварительно её
+                        верифицировать. Подробную инструкцию по прохождению верификации можно найти здесь.<br>
+                        2. Мониторинг транзакций<br>
+                        Проверка пользователей ведется не только путем верификации их личности, но и путем анализа их
+                        транзакций. Поэтому Ecash.Expert полагается на анализ данных как на инструмент оценки риска и
+                        обнаружения подозрительной активности Пользователей.<br>
+                        Ecash.Expert осуществляет сбор данных, фильтрацию, ведение записей, управление расследованиями и
+                        отчетность. Что касается политики AML / KYC, Ecash.Expert может отслеживать все транзакции и
+                        оставляет за собой право:<br>
+                        — запрашивать у Пользователя любую дополнительную информацию и документы в случае подозрительных
+                        транзакций;<br>
+                        — приостановить или заблокировать учетную запись Пользователя, если у Ecash.Expert есть
+                        обоснованные подозрения, что этот Пользователь занимается незаконной деятельностью.
+                        Приведенный выше список не является исчерпывающим, и операции будут отслеживаться на ежедневной
+                        основе, чтобы понять, следует ли расценивать транзакции как подозрительные.<br>
+                        3. Оценка рисков<br>
+                        Ecash.Expert, в соответствии с международными требованиями, проверяет транзакции на предмет
+                        риска с помощью AML-сервисов.<br>
+                        В связи с этим, транзакция может быть отклонена, если общий риск превысит 50%.Также, Сервис
+                        может отказать Пользователю в предоставлении услуг, если риск превысит 1,5% в следующих
+                        категориях:<br>
+                        — Dark Service — монеты связанные с насилием над детьми, финансированием терроризма или
+                        торговлей наркотиками;<br>
+                        — Dark Market — монеты, которые использовались для покупок в даркнете;<br>
+                        — Scam — монеты, которые были получены путем обмана своих клиентов;<br>
+                        — Mixer — монеты были пропущены через миксер, чтобы сделать их отслеживание сложным или
+                        невозможным. Часто используется для отмывания денег;<br>
+                        — Illegal Service — монеты связанные с незаконной деятельностью;<br>
+                        — Ransom — монеты, полученные через вымогательство или шантаж;<br>
+                        — Exchange Fraudulent — монеты с биржи связанных с мошенничеством, незаконной деятельностью, или
+                        средства которых были арестованы правительством;<br>
+                        — Stolen — украденные монеты;<br>
+                        — Gambling — монеты связанные с онлайн казино без лицензии.<br>
+                        В случае, если транзакция оказалась высокорискованной, Пользователь должен пройти KYC-проверку
+                        для подтверждения личности.<br>
+                        4. Проведение обмена<br>
+                        Сервис Ecash.Expert предостерегает пользователей от попыток использования Ecash.Expert для
+                        легализации денежных средств, полученных преступным путём, финансирования терроризма,
+                        мошенничества любого рода, а также от использования сервиса для покупки запрещённых товаров и
+                        услуг.<br>
+                        Для предотвращения операций незаконного характера Сервис устанавливает определенные требования
+                        ко всем Заявкам, создаваемым Пользователем:<br>
+                        4.1. Отправителем и получателем Платежа по Заявке должно быть одно и то же лицо. С
+                        использованием услуг Сервиса категорически запрещены переводы в пользу третьих лиц.<br>
+                        4.2. Контактные данные, заносимые Пользователем в Заявку, а также иные персональные данные,
+                        передаваемые Пользователем Сервису, должны достоверными и актуальными. По запросу Пользователя
+                        персональные данные могут быть удалены с базы данных Сервиса в течении 3 лет с даты последней
+                        реализованной Заявки Пользователя.<br>
+                        4.3. При возникновении обоснованных подозрений у администрации Сервиса в том, что пользователь
+                        пытается воспользоваться услугами Сервиса для отмывания денег или с целью проведения любых
+                        других незаконных операций, администрация имеет право:<br>
+                        — приостановить выполнение обменной операции пользователя;<br>
+                        — запросить у пользователя документы идентифицирующие личность;<br>
+                        — запросить, иную информацию, касающуюся платежей;<br>
+                        4.4. Вся информация предоставляемая клиентом может быть передана контролирующим органам в
+                        следующих случаях:<br>
+                        — по запросу правоохранительных органов;<br>
+                        — по решению судов разных инстанций;<br>
+                        — по запросам администраций Платежных систем.<br>
+                        Персональные данные в себя включают:<br>
+                        — фамилия, имя, отчество;<br>
+                        — адрес электронной почты;<br>
+                        — страна проживания/гражданство; — реквизиты используемых кошельков;<br>
+                        — номер мобильного телефона;<br>
+                        — данные документа, удостоверяющего личность;<br>
+                        — адрес места нахождения<br>
+                        4.5. Обработка персональных данных означает запись, систематизацию, накопление, хранение,
+                        уточнение (обновление, изменение), извлечение, использование, передачу (распространение,
+                        предоставление, доступ), в том числе трансграничную, обезличивание, блокирование, удаление,
+                        уничтожение персональных данных, не подпадающих под специальные категории, на обработку которых
+                        требуется письменное согласие Пользователя.<br>
+                        4.6. Обработка персональных данных производится в целях исполнения Сторонами обязательств по
+                        Соглашению, регистрации Пользователя на Сайте Сервиса, обеспечения Пользователя технической
+                        поддержкой, оформления Заявок, оказания Услуг сервиса, рассмотрения обращений и претензий,
+                        направления на адрес электронной почты Пользователя сообщений информационного и иного
+                        характера.<br>
+                        4.7. Основой, дающей Сервису право обрабатывать данные Пользователя, является согласие
+                        Пользователя. Согласие дается в форме четких активных действий Пользователя, а именно одно или
+                        совокупность указанных действий: регистрация Пользователя на Сайте Сервиса и самостоятельное
+                        предоставление Пользователем необходимых данных в процессе такой регистрации, заполнение
+                        электронной формы через Интернет-сайт Сервиса с целью выставления Заявки, осуществление оплаты
+                        Заявки и другие активные действия с использованием Услуг сервиса.<br>
+                        Ecash.Expert оставляет за собой право:<br>
+                        1&#41; требовать от Пользователя предоставить дополнительную информацию, раскрывающую
+                        происхождение
+                        цифровых активов и/или подтверждение того, что эти активы не были получены преступным путем;<br>
+                        2&#41; блокировать аккаунт и любые операции, связанные с Пользователем, передать в
+                        контролирующие
+                        финансовую деятельность и/или правоохранительные органы по месту регистрации Сервиса и, при
+                        необходимости, по адресу регистрации Клиента всю имеющуюся по инциденту информацию и
+                        документы;<br>
+                        3&#41; требовать от Пользователя документы, подтверждающие личность, видеоверификацию, адрес
+                        регистрации, платежеспособность;<br>
+                        4&#41; осуществлять возврат цифровых активов только на реквизиты, с которых перевод был
+                        осуществлен,
+                        после полной проверки службой безопасности Сервиса, если удалось проверить легальное
+                        происхождение средств Клиента;<br>
+                        5&#41; отказать Пользователю в выводе средств на счет третьих лиц без объяснения причин;<br>
+                        6&#41; удерживать средства Пользователя до полного расследования инцидента;<br>
+                        7&#41; контролировать всю цепочку транзакций, с целью выявления подозрительных транзакций;<br>
+                        8&#41; отказать Пользователю в предоставлении услуги, если у Сервиса есть обоснованные
+                        подозрения в
+                        законности происхождения цифровых активов или в случае когда невозможно отследить всю цепочку
+                        движения активов с момента их появления, и удерживать средства на специальных счетах Сервиса.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__body">
+            <div class="footer__main">
+                <a href="#" class="footer__logo">
+                    <picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt="Logo"></picture>
+                </a>
+                <div class="footer__lang lang-footer">
+                    <button type="button" class="lang-footer__btn">ru</button>
+                    <button type="button" class="lang-footer__btn">ua</button>
+                    <button type="button" class="lang-footer__btn">en</button>
+                </div>
+            </div>
+            <div class="footer__menu menu-footer">
+                <nav class="menu-footer__body">
+                    <ul class="menu-footer__list">
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Правила обмена</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Партнерам</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Клиентам</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Курсы обмена</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Политика AML</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts contacts-footer">
+                <h2 class="contacts-footer__title">Контакты</h2>
+                <a href="mailto:goldexteam@gmail.com" class="contacts-footer__mail">
+                    <svg>
+                        <use href="img/icons/icons.svg#mail"></use>
+                    </svg>
+                    goldexteam@gmail.com
+                </a>
+                <a href="#" class="contacts-footer__telegram">
+                    <svg>
+                        <use href="img/icons/icons.svg#telegram"></use>
+                    </svg>
+                    goldexteam@gmail.com
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <div class="popup" id="login">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#user2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Вход</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="registration">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#plus2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Регистрация</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Электронная почта</div>
+                    <input type="text" placeholder="Электронная почта">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Повторите пароль</div>
+                    <input type="password" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="restore">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#question"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Сбросить пароль</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="api">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">API доступ</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Токен для API доступа</div>
+                    <input type="text" placeholder="Токен для API доступа">
+                </div>
+                <button class="profile-popup__switcher switcher">
+                    <span>Включить</span>
+                    <span>Отключить</span>
+                    <input type="checkbox">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="auth">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Двухфакторная аутентификация</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="profile-popup__body" data-desk="code, prepend">
+                <div class="profile-popup__code" data-move="code, 480">
+                    <img src="img/qr.svg" alt="qr">
+                </div>
+                <form action="#" class="profile-popup__form">
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Токен 2FA</div>
+                        <input type="text" placeholder="Токен 2FA">
+                    </div>
+                    <div class="profile-popup__input" data-mob="code, after">
+                        <div class="profile-popup__label">Пароль 2FA</div>
+                        <input type="password" placeholder="Пароль 2FA">
+                    </div>
+                    <button class="profile-popup__switcher switcher">
+                        <span>Включить</span>
+                        <span>Отключить</span>
+                        <input type="checkbox">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="add">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Добавить платежные реквизиты</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <div class="profile-popup__select select-box">
+                        <div class="options-container" data-simplebar>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selected">
+                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                            Bitcoin
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <input type="text" placeholder="Платежные реквизиты">
+                </div>
+                <button class="profile-popup__btn btn-orange">
+                    Добавить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="attention">
+    <div class="popup__wrapper">
+        <div class="popup__content attention">
+            <div class="attention__body">
+                <button type="button" class="attention__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="attention__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#attention"></use>
+                    </svg>
+                </div>
+                <h2 class="attention__title title">Будьте уважними</h2>
+                <p class="attention__info">
+                    Будь ласка , залиште відгук перед запуском генерації суми
+                </p>
+                <div class="attention__link">
+                    Перейти на <a href="#">Bestchange</a>
+                </div>
+                <button type="button" class="attention__btn btn-orange">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="profile-search">
+    <div class="popup__wrapper">
+        <div class="popup__content search-profile">
+            <div class="search-profile__body">
+                <div class="search-profile__header">
+                    <h2 class="search-profile__title">Поиск</h2>
+                    <button type="button" class="search-profile__close popup__close">
+                        <svg>
+                            <use href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <form action="#" class="search-profile__form">
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Отдаваемая валюта</div>
+                        <input type="text" placeholder="Отдаваемая валюта" name="give-currency">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Получаемая валюта</div>
+                        <input type="text" placeholder="Получаемая валюта" name="get-currency">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Дата создания</div>
+                        <input type="text" placeholder="Дата создания" name="date">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Тип сортировки</div>
+                        <input type="text" placeholder="По убыванию" name="sort-type">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Статус заявки</div>
+                        <input type="text" placeholder="Любой" name="give-currency">
+                    </div>
+                    <div class="search-profile__btns">
+                        <button type="submit" class="search-profile__btn btn-orange">Продолжить</button>
+                        <button type="submit" class="search-profile__btn btn-white">Очистить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20230913151908"></script>
+</body>
+
+</html>

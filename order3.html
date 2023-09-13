@@ -4,7 +4,7 @@
 <head>
     <title>Goldex</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230828122023">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230913151908">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -63,7 +63,7 @@
                         <use href="img/icons/icons.svg#telegram"></use>
                     </svg>
                 </button>
-                <button type="button" class="header__btn btn-orange">Регистрация</button>
+                <button type="button" class="header__btn btn-orange popup-link" data-modal="login">Войти</button>
             </div>
             <button class="header__menu-icon" data-desk="btns, before"></button>
         </div>
@@ -240,7 +240,290 @@
 </footer>
     </div>
 
-    <div class="popup" id="attention">
+    <div class="popup" id="login">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#user2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Вход</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="registration">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#plus2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Регистрация</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Электронная почта</div>
+                    <input type="text" placeholder="Электронная почта">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Повторите пароль</div>
+                    <input type="password" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="restore">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#question"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Сбросить пароль</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="api">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">API доступ</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Токен для API доступа</div>
+                    <input type="text" placeholder="Токен для API доступа">
+                </div>
+                <button class="profile-popup__switcher switcher">
+                    <span>Включить</span>
+                    <span>Отключить</span>
+                    <input type="checkbox">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="auth">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Двухфакторная аутентификация</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="profile-popup__body" data-desk="code, prepend">
+                <div class="profile-popup__code" data-move="code, 480">
+                    <img src="img/qr.svg" alt="qr">
+                </div>
+                <form action="#" class="profile-popup__form">
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Токен 2FA</div>
+                        <input type="text" placeholder="Токен 2FA">
+                    </div>
+                    <div class="profile-popup__input" data-mob="code, after">
+                        <div class="profile-popup__label">Пароль 2FA</div>
+                        <input type="password" placeholder="Пароль 2FA">
+                    </div>
+                    <button class="profile-popup__switcher switcher">
+                        <span>Включить</span>
+                        <span>Отключить</span>
+                        <input type="checkbox">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="add">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Добавить платежные реквизиты</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <div class="profile-popup__select select-box">
+                        <div class="options-container" data-simplebar>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selected">
+                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                            Bitcoin
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <input type="text" placeholder="Платежные реквизиты">
+                </div>
+                <button class="profile-popup__btn btn-orange">
+                    Добавить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="attention">
     <div class="popup__wrapper">
         <div class="popup__content attention">
             <div class="attention__body">
@@ -309,7 +592,7 @@
         </div>
     </div>
 </div>
-    <script src="js/app.min.js?_v=20230828122023"></script>
+    <script src="js/app.min.js?_v=20230913151908"></script>
 </body>
 
 </html>
