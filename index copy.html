@@ -4,7 +4,7 @@
 <head>
     <title>Goldex</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230818131121">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230925124834">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -14,7 +14,9 @@
         <header class="header">
     <div class="header__container container">
         <div class="header__body">
-            <a href="/" class="header__logo">Gold<span>ex</span></a>
+            <a href="/" class="header__logo">
+                <picture><source srcset="img/logo-header.webp" type="image/webp"><img src="img/logo-header.png" alt="Logo"></picture>
+            </a>
             <div class="header__menu menu" data-desk="lang, after">
                 <nav class="menu__body" data-mob="lang, append">
                     <ul class="menu__list" data-mob="btns, after">
@@ -55,8 +57,13 @@
                 </div>
             </div>
             <div class="header__btns" data-move="btns, 480">
-                <button type="button" class="header__btn btn-white">Войти</button>
-                <button type="button" class="header__btn btn-orange">Регистрация</button>
+                <button type="button" class="header__btn btn-white">
+                    Telegram
+                    <svg>
+                        <use href="img/icons/icons.svg#telegram"></use>
+                    </svg>
+                </button>
+                <button type="button" class="header__btn btn-orange popup-link" data-modal="login">Войти</button>
             </div>
             <button class="header__menu-icon" data-desk="btns, before"></button>
         </div>
@@ -68,20 +75,17 @@
                 <div class="exchange__body">
                     <div class="exchange__wrapper">
                         <div class="exchange__block block-exchange">
-                            <h2 class="block-exchange__title">Отдаете</h2>
-                            <div class="block-exchange__wrapper">
-                                <div class="block-exchange__input input input_value">
-                                    <input type="text">
-                                    <div class="input__currency">Usd</div>
+                            <h2 class="block-exchange__title" data-desk="give, after">Отдаете</h2>
+                            <div class="block-exchange__wrapper" data-move="give, 768" data-mob="get, after">
+                                <div class="block-exchange__label">Отдаете</div>
+                                <div class="block-exchange__input input">
+                                    <input type="text" placeholder="Мин. 150 USDT">
                                 </div>
-                                <button type="button" class="block-exchange__btn">
-                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
-                                </button>
                             </div>
                             <p class="block-exchange__help">
                                 от 5000 до 75 000 $
                             </p>
-                            <div class="exchange__tabs tabs" data-mob="data-currency, after">
+                            <div class="exchange__tabs tabs">
                                 <div class="tabs__header">
                                     <div class="tabs__item _active">Все</div>
                                     <div class="tabs__item">Crypto</div>
@@ -93,148 +97,156 @@
                                 <div class="tabs__body">
                                     <div class="tabs__block _active">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Tether TRC20 USDT</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Tether TRC20 USDT</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/usdt-red.webp" type="image/webp"><img src="img/usdt-red.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/usdt-red.webp" type="image/webp"><img src="img/usdt-red.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Tether ERC20 USDT</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Tether ERC20 USDT</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/ethereum.webp" type="image/webp"><img src="img/ethereum.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/ethereum.webp" type="image/webp"><img src="img/ethereum.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Ethereum</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Ethereum</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Bitcoin</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Bitcoin</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -243,20 +255,17 @@
                             </div>
                         </div>
                         <div class="exchange__block block-exchange">
-                            <h2 class="block-exchange__title">Получаете</h2>
-                            <div class="block-exchange__wrapper">
-                                <div class="block-exchange__input input input_value">
-                                    <input type="text">
-                                    <div class="input__currency">BTC</div>
+                            <h2 class="block-exchange__title" data-desk="get, after">Получаете</h2>
+                            <div class="block-exchange__wrapper" data-move="get, 768">
+                                <div class="block-exchange__label">Получаете</div>
+                                <div class="block-exchange__input input">
+                                    <input type="text" placeholder="Макс. 99000000 UAH">
                                 </div>
-                                <button type="button" class="block-exchange__btn">
-                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
-                                </button>
                             </div>
                             <p class="block-exchange__help">
                                 Резерв: 72.9999944484848 ВТС
                             </p>
-                            <div class="exchange__tabs tabs" data-mob="form, after">
+                            <div class="exchange__tabs tabs">
                                 <div class="tabs__header">
                                     <div class="tabs__item _active">Все</div>
                                     <div class="tabs__item">Crypto</div>
@@ -268,148 +277,156 @@
                                 <div class="tabs__body">
                                     <div class="tabs__block _active">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Tether TRC20 USDT</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Tether TRC20 USDT</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/usdt-red.webp" type="image/webp"><img src="img/usdt-red.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/usdt-red.webp" type="image/webp"><img src="img/usdt-red.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Tether ERC20 USDT</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Tether ERC20 USDT</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/ethereum.webp" type="image/webp"><img src="img/ethereum.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/ethereum.webp" type="image/webp"><img src="img/ethereum.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Ethereum</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Ethereum</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Bitcoin</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Bitcoin</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tabs__block">
                                         <div class="tabs__content">
-                                            <div class="tabs__search exchange__search search">
+                                            <!-- <div class="tabs__search exchange__search search">
                                                 <input type="text" placeholder="Поиск валюты...">
-                                            </div>
-                                            <div class="tabs__radio radio-options">
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                            </div> -->
+                                            <div class="tabs__scroll" data-simplebar>
+                                                <div class="tabs__radio radio-options">
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Украина) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Украина) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Варшава) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Варшава) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Дубай) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Дубай) USD</span>
-                                                    <input type="radio" name="currency" value="">
-                                                </div>
-                                                <div class="radio-options__item">
-                                                    <div class="radio-options__img">
-                                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                    <div class="radio-options__item">
+                                                        <div class="radio-options__img">
+                                                            <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                                        </div>
+                                                        <span>Наличные (Стамбул) USD</span>
+                                                        <input type="radio" name="currency" value="">
                                                     </div>
-                                                    <span>Наличные (Стамбул) USD</span>
-                                                    <input type="radio" name="currency" value="">
                                                 </div>
                                             </div>
                                         </div>
@@ -419,16 +436,16 @@
                         </div>
                     </div>
                     <div class="exchange__data data-exchange">
-                        <h2 class="data-exchange__title">Ввод данных</h2>
-                        <div class="data-exchange__info" data-desk="data-currency, prepend">
-                            <p class="data-exchange__currency" data-move="data-currency, 768" data-mob="email, after">
+                        <h2 class="data-exchange__title" data-mob="rate, after">Ввод данных</h2>
+                        <div class="data-exchange__info" data-desk="rate, prepend">
+                            <p class="data-exchange__currency" data-move="rate, 768">
                                 Обмен по курсу: 29957.02 $ = 1 BTC
                             </p>
                             <p class="data-exchange__help">
                                 Курс фиксируется после создания заявки
                             </p>
                         </div>
-                        <div class="data-exchange__change change-data" data-desk="details, after">
+                        <div class="data-exchange__change change-data">
                             <div class="change-data__item">
                                 <div class="change-data__icon">
                                     <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
@@ -461,8 +478,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="data-exchange__details details-data" data-desk="form, after"
-                            data-move="details, 768">
+                        <div class="data-exchange__details details-data">
                             <p class="details-data__intro">
                                 Для уточнения деталей обмена обратитесь по контактам:
                             </p>
@@ -478,32 +494,73 @@
                                 </li>
                             </ul>
                         </div>
-                        <form action="#" class="data-exchange__form form-data" data-desk="email, prepend"
-                            data-move="form, 768">
-                            <div class="form-data__input input" data-move="email, 768" data-mob="phone, after">
-                                <input type="text" placeholder="Введите Ваш  e-mail" name="e-mail">
+                        <form action="#" class="data-exchange__form form-data" data-mob="give, prepend">
+                            <div class="form-data__wrapper">
+                                <div class="form-data__label">E-mail</div>
+                                <div class="form-data__input input">
+                                    <input type="text" placeholder="Введите Ваш  e-mail" name="e-mail">
+                                </div>
                             </div>
-                            <div class="form-data__input input" data-mob="wallet, before">
-                                <input type="text" placeholder="Страна" name="country">
+                            <div class="form-data__wrapper">
+                                <div class="form-data__label">Страна</div>
+                                <div class="form-data__input input">
+                                    <input type="text" placeholder="Страна" name="country">
+                                </div>
                             </div>
-                            <div class="form-data__input input" data-desk="phone, after" data-mob="details, after">
-                                <input type="text" placeholder="Город" name="city">
+                            <div class="form-data__wrapper">
+                                <div class="form-data__label">Город</div>
+                                <div class="form-data__input input">
+                                    <input type="text" placeholder="Город" name="city">
+                                </div>
                             </div>
-                            <div class="form-data__input input" data-move="phone, 768" data-desk="wallet, after">
-                                <input type="text" placeholder="Номер телефона или Telegram login" name="phone">
+                            <div class="form-data__wrapper">
+                                <div class="form-data__label">Телефон или Телеграм</div>
+                                <div class="form-data__input input">
+                                    <input type="text" placeholder="Номер телефона или Telegram login" name="phone">
+                                </div>
                             </div>
-                            <div class="form-data__input input input_currency" data-move="wallet, 768">
-                                <input type="text" placeholder="Кошелек Bitcoin" name="wallet">
-                                <div class="input__icon">
-                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                            <div class="form-data__wrapper">
+                                <div class="form-data__label">Кошелек</div>
+                                <div class="form-data__input input input_currency">
+                                    <input type="text" placeholder="Кошелек Bitcoin" name="wallet">
+                                    <div class="input__icon">
+                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-data__checkbox checkbox">
                                 Я согласен с условиями и правилами сервиса
                                 <input type="checkbox" name="agrement">
                             </div>
-                            <button type="submit" class="form-data__btn btn-orange">Перейти к оплате</button>
+                            <button type="submit" class="form-data__btn btn-orange">Обменять</button>
                         </form>
+                    </div>
+                </div>
+                <div class="exchange__partners partners-exchange">
+                    <div class="partners-exchange__body">
+                        <h2 class="partners-exchange__title title">наши партнеры</h2>
+                        <ul class="partners-exchange__list">
+                            <li class="partners-exchange__item">
+                                <a href="#" class="partners-exchange__logo">
+                                    <picture><source srcset="img/partners/image1.webp" type="image/webp"><img src="img/partners/image1.png" alt="Logo"></picture>
+                                </a>
+                            </li>
+                            <li class="partners-exchange__item">
+                                <a href="#" class="partners-exchange__logo">
+                                    <picture><source srcset="img/partners/image2.webp" type="image/webp"><img src="img/partners/image2.png" alt="Logo"></picture>
+                                </a>
+                            </li>
+                            <li class="partners-exchange__item">
+                                <a href="#" class="partners-exchange__logo">
+                                    <picture><source srcset="img/partners/image3.webp" type="image/webp"><img src="img/partners/image3.png" alt="Logo"></picture>
+                                </a>
+                            </li>
+                            <li class="partners-exchange__item">
+                                <a href="#" class="partners-exchange__logo">
+                                    <picture><source srcset="img/partners/image4.webp" type="image/webp"><img src="img/partners/image4.png" alt="Logo"></picture>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -512,14 +569,413 @@
         <footer class="footer">
     <div class="footer__container container">
         <div class="footer__body">
-
+            <div class="footer__main">
+                <a href="#" class="footer__logo">
+                    <picture><source srcset="img/logo-footer.webp" type="image/webp"><img src="img/logo-footer.png" alt="Logo"></picture>
+                </a>
+                <div class="footer__lang lang-footer">
+                    <button type="button" class="lang-footer__btn">ru</button>
+                    <button type="button" class="lang-footer__btn">ua</button>
+                    <button type="button" class="lang-footer__btn">en</button>
+                </div>
+            </div>
+            <div class="footer__menu menu-footer">
+                <nav class="menu-footer__body">
+                    <ul class="menu-footer__list">
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Правила обмена</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Партнерам</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Клиентам</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Курсы обмена</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Вопросы и ответы</a>
+                        </li>
+                        <li class="menu-footer__item">
+                            <a href="#" class="menu-footer__link">Политика AML</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__contacts contacts-footer">
+                <h2 class="contacts-footer__title">Контакты</h2>
+                <a href="mailto:goldexteam@gmail.com" class="contacts-footer__mail">
+                    <svg>
+                        <use href="img/icons/icons.svg#mail"></use>
+                    </svg>
+                    goldexteam@gmail.com
+                </a>
+                <a href="#" class="contacts-footer__telegram">
+                    <svg>
+                        <use href="img/icons/icons.svg#telegram"></use>
+                    </svg>
+                    goldexteam@gmail.com
+                </a>
+            </div>
         </div>
     </div>
 </footer>
     </div>
 
-    
-    <script src="js/app.min.js?_v=20230818131121"></script>
+    <div class="popup" id="login">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#user2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Вход</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="registration">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#plus2"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Регистрация</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Электронная почта</div>
+                    <input type="text" placeholder="Электронная почта">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Пароль</div>
+                    <input type="password" placeholder="Пароль">
+                </div>
+                <div class="login__input">
+                    <div class="login__label">Повторите пароль</div>
+                    <input type="password" placeholder="Повторите пароль">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="restore">
+                        <svg>
+                            <use href="img/icons/icons.svg#question"></use>
+                        </svg>
+                        <span>Забыли пароль?</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="restore">
+    <div class="popup__wrapper">
+        <div class="popup__content login">
+            <button type="button" class="login__close popup__close">
+                <svg>
+                    <use href="img/icons/icons.svg#close"></use>
+                </svg>
+            </button>
+            <div class="login__header">
+                <div class="login__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#question"></use>
+                    </svg>
+                </div>
+                <h2 class="login__title title">Сбросить пароль</h2>
+            </div>
+            <form action="#" class="login__form">
+                <div class="login__input">
+                    <div class="login__label">Логин</div>
+                    <input type="text" placeholder="Логин">
+                </div>
+                <button type="submit" class="login__btn btn-orange">
+                    Продолжить
+                </button>
+                <div class="login__links">
+                    <a href="#" class="login__link popup-link" data-modal="login">
+                        <svg>
+                            <use href="img/icons/icons.svg#user2"></use>
+                        </svg>
+                        <span>Вход</span>
+                    </a>
+                    <a href="#" class="login__link popup-link" data-modal="registration">
+                        <svg>
+                            <use href="img/icons/icons.svg#plus2"></use>
+                        </svg>
+                        <span>Регистрация</span>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="api">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">API доступ</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Токен для API доступа</div>
+                    <input type="text" placeholder="Токен для API доступа">
+                </div>
+                <button type="button" class="profile-popup__switcher switcher">
+                    <span>Включить</span>
+                    <span>Отключить</span>
+                    <input type="checkbox">
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="auth">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Двухфакторная аутентификация</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <div class="profile-popup__body" data-desk="code, prepend">
+                <div class="profile-popup__code" data-move="code, 480">
+                    <img src="img/qr.svg" alt="qr">
+                </div>
+                <form action="#" class="profile-popup__form">
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Токен 2FA</div>
+                        <input type="text" placeholder="Токен 2FA">
+                    </div>
+                    <div class="profile-popup__input" data-mob="code, after">
+                        <div class="profile-popup__label">Пароль 2FA</div>
+                        <input type="password" placeholder="Пароль 2FA">
+                    </div>
+                    <button type="button" class="profile-popup__switcher switcher">
+                        <span>Включить</span>
+                        <span>Отключить</span>
+                        <input type="checkbox">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="add">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Добавить платежные реквизиты</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <div class="profile-popup__select select-box">
+                        <div class="options-container" data-simplebar>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                    Bitcoin
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                    USDT
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="bitcoin" name="Bitcoin">
+                                <label for="for bitcoin">
+                                    <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                    Cash
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selected">
+                            <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                            Bitcoin
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Платежные реквизиты</div>
+                    <input type="text" placeholder="Платежные реквизиты">
+                </div>
+                <button class="profile-popup__btn btn-orange">
+                    Добавить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="attention">
+    <div class="popup__wrapper">
+        <div class="popup__content attention">
+            <div class="attention__body">
+                <button type="button" class="attention__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+                <div class="attention__icon">
+                    <svg>
+                        <use href="img/icons/icons.svg#attention"></use>
+                    </svg>
+                </div>
+                <h2 class="attention__title title">Будьте уважними</h2>
+                <p class="attention__info">
+                    Будь ласка , залиште відгук перед запуском генерації суми
+                </p>
+                <div class="attention__link">
+                    Перейти на <a href="#">Bestchange</a>
+                </div>
+                <button type="button" class="attention__btn btn-orange">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="profile-search">
+    <div class="popup__wrapper">
+        <div class="popup__content search-profile">
+            <div class="search-profile__body">
+                <div class="search-profile__header">
+                    <h2 class="search-profile__title">Поиск</h2>
+                    <button type="button" class="search-profile__close popup__close">
+                        <svg>
+                            <use href="img/icons/icons.svg#close"></use>
+                        </svg>
+                    </button>
+                </div>
+                <form action="#" class="search-profile__form">
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Отдаваемая валюта</div>
+                        <input type="text" placeholder="Отдаваемая валюта" name="give-currency">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Получаемая валюта</div>
+                        <input type="text" placeholder="Получаемая валюта" name="get-currency">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Дата создания</div>
+                        <input type="text" placeholder="Дата создания" name="date">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Тип сортировки</div>
+                        <input type="text" placeholder="По убыванию" name="sort-type">
+                    </div>
+                    <div class="search-profile__input">
+                        <div class="search-profile__label">Статус заявки</div>
+                        <input type="text" placeholder="Любой" name="give-currency">
+                    </div>
+                    <div class="search-profile__btns">
+                        <button type="submit" class="search-profile__btn btn-orange">Продолжить</button>
+                        <button type="submit" class="search-profile__btn btn-white">Очистить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20230925124834"></script>
 </body>
 
 </html>

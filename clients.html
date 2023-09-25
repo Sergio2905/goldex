@@ -4,7 +4,7 @@
 <head>
     <title>Goldex</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style.min.css?_v=20230913210811">
+    <link rel="stylesheet" href="css/style.min.css?_v=20230925134154">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -502,7 +502,175 @@
         </div>
     </div>
 </div>
-    <script src="js/app.min.js?_v=20230913210811"></script>
+
+<div class="popup" id="invest">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Инвестировать</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Инвестиционный пакет</div>
+                    <div class="profile-popup__select select-box">
+                        <div class="options-container" data-simplebar>
+                            <div class="option">
+                                <input type="radio" id="package1" name="package1">
+                                <label for="package1">
+                                    Период 30 дней, доходность 2%, сумма 100-1000USD
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="package2" name="package2">
+                                <label for="package2">
+                                    Package 2
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="package3" name="package3">
+                                <label for="package3">
+                                    Package 3
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="package4" name="package4">
+                                <label for="package4">
+                                    Package 4
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="package5" name="package5">
+                                <label for="package5">
+                                    Package 5
+                                </label>
+                            </div>
+                            <div class="option">
+                                <input type="radio" id="package6" name="package6">
+                                <label for="package6">
+                                    Package 6
+                                </label>
+                            </div>
+                        </div>
+                        <div class="selected">
+                            Период 30 дней, доходность 2%, сумма 100-1000USD
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-popup__input">
+                    <div class="profile-popup__label">Сумма</div>
+                    <input type="text" placeholder="Сумма">
+                </div>
+                <button class="profile-popup__btn btn-orange">
+                    Включить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup" id="input">
+    <div class="popup__wrapper">
+        <div class="popup__content profile-popup">
+            <div class="profile-popup__header">
+                <h2 class="profile-popup__title title">Ввод / Вывод средств</h2>
+                <button type="button" class="profile-popup__close popup__close">
+                    <svg>
+                        <use href="img/icons/icons.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+            <form action="#" class="profile-popup__form">
+                <div class="profile-popup__wrapper">
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Операция</div>
+                        <div class="profile-popup__select select-box">
+                            <div class="options-container" data-simplebar>
+                                <div class="option">
+                                    <input type="radio" id="output" name="output">
+                                    <label for="output">
+                                        Вывести средства
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="input" name="input">
+                                    <label for="input">
+                                        Ввести средства
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                Вывести средства
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Получаете</div>
+                        <div class="profile-popup__select select-box">
+                            <div class="options-container" data-simplebar>
+                                <div class="option">
+                                    <input type="radio" id="bitcoin" name="currency" value="bitcoin">
+                                    <label for="bitcoin">
+                                        <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                        Advanced Cash USD
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="ethereum" name="currency" value="ethereum">
+                                    <label for="ethereum">
+                                        <picture><source srcset="img/ethereum.webp" type="image/webp"><img src="img/ethereum.png" alt="Icon"></picture>
+                                        Ethereum
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="cash" name="currency" value="cash">
+                                    <label for="cash">
+                                        <picture><source srcset="img/cash.webp" type="image/webp"><img src="img/cash.png" alt="Icon"></picture>
+                                        Cash
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <input type="radio" id="usdt" name="currency" value="usdt">
+                                    <label for="usdt">
+                                        <picture><source srcset="img/usdt.webp" type="image/webp"><img src="img/usdt.png" alt="Icon"></picture>
+                                        Cash
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="selected">
+                                <picture><source srcset="img/bitcoin.webp" type="image/webp"><img src="img/bitcoin.png" alt="Icon"></picture>
+                                Advanced Cash USD
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Сумма</div>
+                        <input type="text" placeholder="Сумма">
+                    </div>
+                    <div class="profile-popup__input">
+                        <div class="profile-popup__label">Реквизиты</div>
+                        <input type="text" placeholder="Реквизиты">
+                    </div>
+                </div>
+                <div class="profile-popup__info">
+                    Мин. Макс. Сумма:11.00 USD - 9470028.20 USD <br>
+                    Курс обмена:1 USD - 1 USD
+                </div>
+                <div class="profile-popup__warning">
+                    Направление обмена включает дополнительную комиссию для получаемой валюты в размере 10.00 USD.
+                </div>
+                <button class="profile-popup__btn btn-orange">
+                    Включить
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+    <script src="js/app.min.js?_v=20230925134154"></script>
 </body>
 
 </html>
